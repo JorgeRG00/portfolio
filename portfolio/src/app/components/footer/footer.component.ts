@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// Agregar año dinámico
 @Component({
   selector: 'app-footer',
   imports: [],
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  currentYear = new Date().getFullYear();
 }
