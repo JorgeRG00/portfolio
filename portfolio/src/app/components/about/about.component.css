@@ -1,0 +1,127 @@
+/* Estilos generales de la sección */
+.about-section {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de títulos */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.personal-info h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Estilos de la imagen de perfil */
+.imagen-perfil {
+    text-align: center;
+    margin: 2.5rem 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.foto-perfil {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--primary-color);
+    transition: all 0.4s ease-in-out;
+    filter: brightness(1.02) contrast(1.05);
+}
+
+.foto-perfil:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05) contrast(1.1);
+}
+
+.imagen-perfil::after {
+    content: '';
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    background: linear-gradient(45deg, var(--primary-color) 0%, transparent 100%);
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.imagen-perfil:hover::after {
+    opacity: 0.2;
+}
+
+/* Estilos del contenido textual */
+.resumen-profesional {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+}
+
+.filosofia {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--card-background-light);
+    border-radius: 10px;
+}
+
+.filosofia p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .personal-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .foto-perfil {
+        max-width: 200px;
+    }
+
+    .resumen-profesional {
+        font-size: 1.1rem;
+    }
+
+    .filosofia p {
+        font-size: 1rem;
+    }
+}

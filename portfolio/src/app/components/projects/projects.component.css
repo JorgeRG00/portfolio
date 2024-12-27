@@ -1,0 +1,95 @@
+/* Estilos generales de la sección */
+.experiencia-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Título de la sección */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+/* Elementos de experiencia */
+.experiencia-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experiencia-item:hover {
+    transform: translateY(-5px);
+}
+
+.experiencia-item h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    color: #3498db;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Lista de responsabilidades */
+.responsabilidades {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.responsabilidades li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.responsabilidades li::before {
+    content: '•';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .experiencia-item {
+        padding: 1.5rem;
+    }
+
+    .experiencia-item h3 {
+        font-size: 1.3rem;
+    }
+}
